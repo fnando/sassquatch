@@ -1,0 +1,28 @@
+%image-replace {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+// Apply SVG as background-image when possible.
+// If Rails support is enabled, use the image-url mixin.
+@mixin svg($path) {
+  @include background-image("#{$path}.svg");
+  .no-svg & { @include background-image("#{$path}.png"); }
+}
+
+@mixin image-replace($path, $width, $height) {
+  @extend %image-replace;
+  @include background-image($path);
+
+  height: $height;
+  width: $width;
+}
+
+@mixin svg-image-replace($path, $width, $height) {
+  @extend %image-replace;
+  @include svg($path);
+
+  height: $height;
+  width: $width;
+}

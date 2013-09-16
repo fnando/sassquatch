@@ -1,0 +1,4 @@
+%floated-items {
+  @extend %clearfix;
+  > * { float: left; }
+}

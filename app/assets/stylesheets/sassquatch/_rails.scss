@@ -1,0 +1,7 @@
+@mixin rails {
+  @if $rails { @content; }
+}
+
+@mixin no-rails {
+  @if $rails != true { @content; }
+}

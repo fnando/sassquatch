@@ -1,0 +1,21 @@
+$column: 54px !default;
+$gutter: 30px !default;
+$grid-columns: 12 !default;
+$max-width: em($column * $grid-columns + ($grid-columns - 1) * $gutter) !default;
+
+@mixin shift-columns($columns, $font-size: $base-font) {
+  margin-left: em($columns * $column + $columns * $gutter, $font-size);
+}
+
+@mixin span-columns($columns, $font-size: $base-font) {
+  @include columns($columns, $font-size);
+  margin-right: em($gutter, $font-size);
+}
+
+@mixin columns($columns, $font-size: $base-font) {
+  width: em(($columns * $column) + (($columns - 1) * $gutter), $font-size);
+}
+
+@mixin all-columns($font-size: $base-font) {
+  @include span-columns($grid-columns, true, $font-size);
+}

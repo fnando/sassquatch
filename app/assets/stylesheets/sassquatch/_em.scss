@@ -1,0 +1,18 @@
+$base-font: 16px !default;
+
+@function remove-unit($number) {
+  $unit: unit($number);
+  $one: 1;
+
+  @if $unit == "px" { $one: 1px; }
+  @if $unit == "em" { $one: 1em; }
+  @if $unit == "%"  { $one: 1%;  }
+
+  @return $number / $one;
+}
+
+@function em($target, $context: $base-font) {
+  $size: remove-unit($target) / remove-unit($context);
+
+  @return #{$size}em;
+}
