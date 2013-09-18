@@ -1,0 +1,8 @@
+@mixin emboss($opacity, $opacity2){
+  box-shadow: rgba(#fff, $opacity) 0 1px 0,
+              inset rgba(#000, $opacity2) 0 1px 0;
+}
+
+@mixin letterpress($opacity){
+  text-shadow: rgba(#fff, $opacity) 0 1px 0;
+}

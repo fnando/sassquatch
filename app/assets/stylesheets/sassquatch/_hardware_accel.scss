@@ -1,0 +1,9 @@
+// CSS animations are much more efficient than JavaScript-based animation.
+// One nifty trick to take CSS animation performance to the next level is
+// forcing them into hardware acceleration.
+%hardware-accel {
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}

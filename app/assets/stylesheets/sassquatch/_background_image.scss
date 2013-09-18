@@ -1,0 +1,4 @@
+@mixin background-image($path) {
+  @include rails { background-image: image-url($path); }
+  @include no-rails { background-image: url($path); }
+}

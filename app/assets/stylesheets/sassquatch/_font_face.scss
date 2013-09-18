@@ -1,0 +1,13 @@
+//  @include font-face('Open Sans', OpenSansLightRegular, opensans-light, 300, normal);
+@mixin font-face($alias, $family, $filename, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "#{$alias}";
+    src: local("#{$family}"), url("fonts/#{$filename}-webfont.eot");
+    src: local("#{$family}"), url("fonts/#{$filename}-webfont.eot?#iefix") format("embedded-opentype"),
+         local("#{$family}"), url("fonts/#{$filename}-webfont.woff") format("woff"),
+         local("#{$family}"), url("fonts/#{$filename}-webfont.ttf") format("truetype");
+
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
