@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sassquatch (0.0.2)
+    sassquatch (0.0.3)
       thor
 
 GEM
