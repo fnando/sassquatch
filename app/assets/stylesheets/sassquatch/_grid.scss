@@ -17,5 +17,5 @@ $max-width: em($column * $grid-columns + ($grid-columns - 1) * $gutter) !default
 }
 
 @mixin all-columns($font-size: $base-font) {
-  @include span-columns($grid-columns, true, $font-size);
+  @include columns($grid-columns, $font-size);
 }
