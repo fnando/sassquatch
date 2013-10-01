@@ -1,46 +1,50 @@
-@mixin lucida-grande {
+%lucida-grande {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 
-@mixin myriad-pro {
+%myriad-pro {
   font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 }
 
-@mixin georgia {
+%georgia {
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
-@mixin helvetica-neue {
+%helvetica {
   font-family: "Helvetica Neue", "HelveticaNeue", sans-serif;
 }
 
-@mixin alegreya {
+%helvetica-neue {
+  font-family: "Helvetica Neue", "HelveticaNeue", sans-serif;
+}
+
+%alegreya {
   font-family: Alegreya, Cambria, Georgia, serif;
 }
 
-@mixin monospace {
+%monospace {
   font-family: Menlo, Monaco, "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
 }
 
-@mixin verdana {
+%verdana {
   font-family: Verdana, Geneva, sans-serif;
 }
 
-@mixin minion-pro {
+%minion-pro {
   font-family: minion-pro, Georgia, serif;
 }
 
-@mixin bariol {
+%bariol {
   font-family: bariol, "arial rounded", sans-serif;
   font-weight: normal;
 }
 
-@mixin bariol-bold {
+%bariol-bold {
   font-family: "Bariol Bold", "Arial Rounded MT Bold", sans-serif;
   font-weight: normal;
 }
 
-@mixin bariol-light {
+%bariol-light {
   font-family: "Bariol Light", "Arial Rounded MT Light", sans-serif;
   font-weight: normal;
 }
