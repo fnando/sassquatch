@@ -1,21 +1,35 @@
-$column: 54px !default;
-$gutter: 30px !default;
+$grid-style: flex !default;
+$grid-column-width: 54px !default;
+$grid-gutter: 30px !default;
 $grid-columns: 12 !default;
-$max-width: em($column * $grid-columns + ($grid-columns - 1) * $gutter) !default;
+$grid-max-width: $grid-column-width * $grid-columns + ($grid-columns - 1) * $grid-gutter !default;
 
-@mixin shift-columns($columns, $font-size: $base-font) {
-  margin-left: em($columns * $column + $columns * $gutter, $font-size);
+@function grid-width($columns, $last-column, $font-size) {
+  $width: $columns * $grid-column-width + $columns * $grid-gutter;
+
+  @if $last-column == true {
+    $width: $width - $grid-gutter;
+  }
+
+  @return grid-size($width, $font-size);
 }
 
-@mixin span-columns($columns, $font-size: $base-font) {
-  @include columns($columns, $font-size);
-  margin-right: em($gutter, $font-size);
+@function grid-size($size, $font-size) {
+  @if $grid-style == flex {
+    @return $size / $grid-max-width * 100%;
+  } @else {
+    @return em($size, $font-size);
+  }
 }
 
-@mixin columns($columns, $font-size: $base-font) {
-  width: em(($columns * $column) + (($columns - 1) * $gutter), $font-size);
+@mixin columns($how-many, $last-column: false, $font-size: $base-font) {
+  width: grid-width($how-many, true, $font-size);
+
+  @if $last-column == false {
+    margin-right: grid-size($grid-gutter, $font-size);
+  }
 }
 
-@mixin all-columns($font-size: $base-font) {
-  @include columns($grid-columns, $font-size);
+@mixin shift-columns($how-many, $font-size: $base-font) {
+  margin-left: grid-width($how-many, false, $font-size);
 }
