@@ -1,0 +1,4 @@
+// Just a shortcut for background transition.
+@mixin background-transition($duration: .2s) {
+  @include transition(background $duration ease-in);
+}
