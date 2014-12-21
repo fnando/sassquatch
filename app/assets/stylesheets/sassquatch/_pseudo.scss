@@ -1,0 +1,9 @@
+%before:before {
+  @extend %inline-block;
+  content: '';
+}
+
+%after:after {
+  @extend %inline-block;
+  content: '';
+}
