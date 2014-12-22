@@ -1,54 +1,68 @@
+$lucida-grande: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$myriad-pro: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+$georgia: Georgia, Times, "Times New Roman", serif;
+$pt-serif: "PT Serif", Georgia, Times, "Times New Roman", serif;
+$helvetica: "Helvetica Neue", "HelveticaNeue", sans-serif;
+$helvetica-neue: "Helvetica Neue", "HelveticaNeue", sans-serif;
+$alegreya: Alegreya, Cambria, Georgia, serif;
+$monospace: Menlo, Monaco, "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+$verdana: Verdana, Geneva, sans-serif;
+$minion-pro: minion-pro, Georgia, serif;
+$bariol: bariol, "arial rounded", sans-serif;
+$bariol-bold: "Bariol Bold", "Arial Rounded MT Bold", sans-serif;
+$bariol-light: "Bariol Light", "Arial Rounded MT Light", sans-serif;
+
 %lucida-grande {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: $lucida-grande;
 }
 
 %myriad-pro {
-  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-family: $myriad-pro;
 }
 
 %georgia {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: $georgia;
 }
 
 %pt-serif {
-  font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
+  font-family: $pt-serif;
 }
 
 %helvetica {
-  font-family: "Helvetica Neue", "HelveticaNeue", sans-serif;
+  font-family: $helvetica;
 }
 
 %helvetica-neue {
-  font-family: "Helvetica Neue", "HelveticaNeue", sans-serif;
+  font-family: $helvetica-neue;
 }
 
 %alegreya {
-  font-family: Alegreya, Cambria, Georgia, serif;
+  font-family: $alegreya;
 }
 
 %monospace {
-  font-family: Menlo, Monaco, "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+  font-family: $monospace;
 }
 
 %verdana {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: $verdana;
 }
 
 %minion-pro {
-  font-family: minion-pro, Georgia, serif;
+  font-family: $minion-pro;
 }
 
 %bariol {
-  font-family: bariol, "arial rounded", sans-serif;
+  font-family: $bariol;
   font-weight: normal;
 }
 
 %bariol-bold {
-  font-family: "Bariol Bold", "Arial Rounded MT Bold", sans-serif;
+  font-family: $bariol-bold;
   font-weight: normal;
 }
 
 %bariol-light {
-  font-family: "Bariol Light", "Arial Rounded MT Light", sans-serif;
+  font-family: $bariol-light;
   font-weight: normal;
 }
