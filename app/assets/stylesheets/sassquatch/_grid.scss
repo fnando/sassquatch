@@ -22,7 +22,7 @@ $grid-max-width: $grid-column-width * $grid-columns + ($grid-columns - 1) * $gri
   }
 }
 
-@mixin columns($how-many, $last-column: false, $font-size: $base-font) {
+@mixin columns($how-many, $last-column: false, $font-size: $font-size-base) {
   width: grid-width($how-many, true, $font-size);
 
   @if $last-column == false {
@@ -30,6 +30,6 @@ $grid-max-width: $grid-column-width * $grid-columns + ($grid-columns - 1) * $gri
   }
 }
 
-@mixin shift-columns($how-many, $font-size: $base-font) {
+@mixin shift-columns($how-many, $font-size: $font-size-base) {
   margin-left: grid-width($how-many, false, $font-size);
 }

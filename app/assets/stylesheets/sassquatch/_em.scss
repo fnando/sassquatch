@@ -1,4 +1,4 @@
-$base-font: 16px !default;
+$font-size-base: 16px !default;
 
 @function remove-unit($number) {
   $unit: unit($number);
@@ -11,8 +11,17 @@ $base-font: 16px !default;
   @return $number / $one;
 }
 
-@function em($target, $context: $base-font) {
-  $size: remove-unit($target) / remove-unit($context);
+@function convert-to-pixel($number) {
+  $unit: unit($number);
 
-  @return #{$size}em;
+  @if $unit == "em" { @return remove-unit($number) * $font-size-base; }
+  @if $unit == "px" { @return $number; }
+
+  @return 0;
+}
+
+@function em($target, $context: $font-size-base) {
+  $size: remove-unit($target) / remove-unit(convert-to-pixel($context));
+
+  @return $size * 1em;
 }
