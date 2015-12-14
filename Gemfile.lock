@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sassquatch (0.0.4)
+    sassquatch (0.0.5)
       thor
 
 GEM
@@ -16,3 +16,6 @@ PLATFORMS
 DEPENDENCIES
   rake
   sassquatch!
+
+BUNDLED WITH
+   1.10.6
